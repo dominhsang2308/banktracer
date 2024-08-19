@@ -26,11 +26,11 @@ def get_amount():
         return get_amount()
     
 def get_category():
-    return input("Enter the category: ").upper()
-    # if category in CATEGORIES:
-    #     return CATEGORIES[category]
-    # print("Invalid category. Please enter 'I' for Income or 'E' for Expense")
-    
+    category = input("Enter the category:('I' for Income or 'E' for Expense): ").upper()
+    if category in CATEGORIES:
+        return CATEGORIES[category]
+    print("Invalid category. Please enter 'I' for Income or 'E' for Expense")
+    return get_category()
 
 def get_description():
     return input("Enter a description: ")
